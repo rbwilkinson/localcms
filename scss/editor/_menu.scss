@@ -1,0 +1,199 @@
+/*! Responsive-nav.js 1.0.25 by @viljamis. Animation by Bennett Feely http://sarasoueidan.com/blog/navicon-transformicons */
+
+.nav-collapse {
+  max-height:inherit !important;
+  width: 100%;
+  @include vendor-prefix(transition, height 0.2s ease-in-out);
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    list-style: none;
+  }
+  
+  li {
+    width: 100%;
+    display: block;
+    margin: 0;
+    
+    a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      padding: $base-padding;
+      
+      &:hover, &:focus, &:active {
+          background-color: darken($color-red, 10%);
+          color: #fff; 
+      } 
+      
+      &.active {
+        background-color: lighten($color-red, 10%);
+      }         
+      
+      &.logout {
+        margin-top: $base-padding;
+        background-color: darken($color-red, 15%);
+      }         
+    }  
+    
+    &.tel {
+      display: none;
+    }      
+  }
+  
+  &.opened {
+    max-height: 9999px !important;    
+  }
+  
+  &.disable-pointer-events {
+    pointer-events: none !important;
+  }
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.columns.nav-collapse {
+  padding: 0;
+}   
+
+ 
+$button-size : 2rem; 
+
+@mixin line {
+  display: inline-block;
+  width: $button-size;
+  height: $button-size/7;
+  background: #fff;
+  border-radius: $button-size/14; 
+  @include vendor-prefix(transition, all 0.1s ease-in-out);
+} 
+
+.nav-menu {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  @include vendor-prefix(user-select, none);
+  outline: none;  
+  border: none !important; 
+  background: transparent !important;
+  box-shadow: none !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px; 
+  padding-left: 30px; 
+  
+  &:after, &:before {
+    display: none;
+  }
+    
+}
+
+.lines {
+  @include line;
+  position: relative; 
+  
+  &:before, &:after {
+   
+   @include line;
+    position: absolute;
+    left: 0;
+    content: '';
+    transform-origin: $button-size/14 center;
+  }
+  &:before { top: $button-size/4; }
+  &:after { top: -$button-size/4; }
+}
+
+.nav-menu.x.close .lines {
+    background: transparent;
+
+    &:before, &:after{
+      @include vendor-prefix(transform-origin, 50% 50%);
+      top:0;
+      width: $button-size;
+      height: $button-size/4.5;
+    }
+
+    &:before{
+      @include vendor-prefix(transform, rotate3d(0,0,1,45deg) scale(0.8)); 
+    }
+    &:after{
+      @include vendor-prefix(transform, rotate3d(0,0,1,-45deg) scale(0.8)); 
+    }
+} 
+
+ 
+@media #{$medium-up} {
+  
+  
+  .js .nav-collapse {
+    position: relative;
+    
+    &.closed {
+      max-height: none;  
+    }
+  }
+  
+  .nav-menu, .nav-toggle {
+    display: none;
+  }  
+
+
+  .nav-collapse {
+    display: block;
+    ul {
+      position: relative;
+      top: auto;
+      right: auto;
+      display: block;
+      padding: 0;
+      margin: 0; 
+      width: 100%; 
+      background: none;
+      text-align: right;
+    }
+  
+    li {
+    float: none;    
+    display: inline;
+    margin: 0;
+    
+      a {
+        float: none;
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+        padding: $base-padding*1.5;
+        
+        &:hover, &:focus, &:active {
+          background-color: darken($color-red,10%);
+        }  
+        
+        &.active {
+          background: $color-off-white;
+          color: $color-red;
+        }
+        
+        &.logout {
+          background-color: darken($color-red,15%);
+          margin-top: $base-padding*2;          
+        }         
+      
+      } 
+          
+    }
+  }
+
+
+} 
+ 

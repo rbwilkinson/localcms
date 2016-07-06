@@ -1,0 +1,282 @@
+
+
+/*  Default body styles ---------------------- */
+
+body {
+  background: $color-off-white url('../images/bg-dirt.png');
+  color: $color-base-font;
+  padding: 0;
+  margin: 0;
+  font-size: $font-size-normal;
+  font-family: $base-font-family;
+  font-weight: $normal;
+  line-height: 1.45;
+  position: relative;
+}
+
+/* Miscellaneous useful HTML classes ---------------------- */
+.left         { float: left !important; }
+.right        { float: right !important; }
+.text-left    { text-align: left !important; }
+.text-right   { text-align: right !important; }
+.text-center  { text-align: center !important; }
+.text-justify { text-align: justify !important; }
+.hidden         { display: none; }
+
+// Antialiased font smoothing works best for light text on a dark background.
+// Apply to single elements instead of globally to body.
+.antialiased { -webkit-font-smoothing: antialiased; }
+
+
+/* Links  ---------------------- */
+
+a {
+  color: $color-blue;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: none;
+    color: darken($color-blue, 10%);
+  }
+}
+
+a:focus { outline: none; }
+
+
+.content {
+  a {  
+    border-bottom: 1px solid $color-blue;
+  
+    &:hover {
+      border-bottom: 1px solid darken($color-blue, 10%);
+    }
+  }
+}
+
+/* Lists  ---------------------- */
+
+ul, ol {
+  li {
+    margin-bottom: $base-padding/2;
+  }
+}
+
+
+/* Headers  ---------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font-family;
+  line-height: 1.25;
+}
+
+/* Header  ---------------------- */
+
+
+h3 {
+  font-size: $font-size-xlarge;
+  margin-bottom: $base-padding/2;
+}
+
+p {
+  margin-top: 0;
+}
+
+
+nav ul {
+  @include navigation-list;
+  li {
+    a {
+      display: block;
+      padding: $base-padding;
+      text-decoration: none;
+      color: $color-base-font;
+ 
+      &:hover {
+        background: $color-light-grey;
+        text-decoration: none;
+      }
+      
+      &:active {
+        background: $color-dark;
+        color: #fff;
+      }      
+      
+      &.active {
+        font-weight: $bold;
+      }
+    }
+  }
+}
+
+/* Reusable Layouts  ---------------------- */  
+
+.box {
+    padding: $base-padding;
+    background: #fff;
+}
+
+
+/* Hero Banner  ---------------------- */
+
+.hero { 
+  background: $color-red url(../images/header-bg.jpg) no-repeat top center;
+  background-size: cover;
+  color: #fff;
+  padding: $base-padding 0;
+  
+  a {
+    text-decoration: none;
+  }
+  
+  h1 {
+    margin: 0;
+    text-align: center;
+    margin-bottom: $base-padding*2;
+    
+    a:hover {
+      text-decoration: none;
+    }
+  }
+  
+  h3 {
+    margin: 0;
+    font-size: $font-size-small;
+    font-weight: $normal;
+  }
+  
+  a {
+    color: #fff;
+  }
+  
+  .menu {
+    display: block;
+    padding: $base-padding;
+    text-align: center;
+    border: 2px solid #fff;
+    color: #fff;
+    background: rgba(0,0,0,0.1);
+    text-shadow: none;
+    margin-top: $base-padding*2;
+    font-family: $header-font-family;
+    text-transform: uppercase;
+
+    &:hover {
+      background: #fff;
+      color: $color-dark-brown; 
+      text-decoration: none; 
+    }
+  }
+  
+  &.menu-hero {
+    h1 {
+      text-align: left;
+      margin-bottom: 0;
+    }
+    
+    .menu {
+      margin-top: 0;
+    }
+  }
+}
+
+.location {
+  a {
+    font-size: $font-size-small;
+    text-decoration: underline;
+  }
+}
+
+/* Content  ---------------------- */
+
+.content {
+  margin-bottom: $base-padding*2;
+  
+  h2 {
+    font-size: $font-size-large;
+    margin: 0;
+    padding: 0;
+    color: $color-red;
+  }
+}
+
+#menu {
+  @include blank-list;
+  
+  h3 {
+    margin-bottom: 0;
+  }
+  
+  .description {
+    margin-top: 0;
+  }
+}
+
+.content img {
+  text-align: center;
+  margin-bottom: $base-padding;
+}
+
+.demo img {
+  max-width: 80% !important;
+}
+
+.contact {
+  text-align: center;
+  
+  h3 {
+    font-size: $font-size-large;
+  }
+}
+
+footer, #footer {
+  padding-top: $base-padding*2;
+  padding-bottom: $base-padding*2;
+  margin-top: $base-padding*2; 
+  border-top: 1px solid $color-light-grey;
+  font-family: $header-font-family;
+  font-size: $font-size-small;
+
+  ul {
+    @include blank-list;
+  }
+}
+
+
+
+
+/* Mobile and up media queries  ---------------------- */
+@media #{$small-up} {
+
+}  
+
+
+
+/* Tablet and up media queries  ---------------------- */
+@media #{$medium-up} {
+  .hero {
+    padding: $base-padding*10 0;
+    font-size: $font-size-large;
+    
+    
+    &.menu-hero {
+      padding: $base-padding*2 0;
+    }
+  }
+  
+  .content img {
+    float: right;
+    margin-top: -30px;
+    padding-left: 20px;
+  }
+  
+  .demo img {
+    max-width: 100% !important;
+  }
+     
+} 
+
+/* Desktop and up media queries  ---------------------- */
+@media #{$large-up} {
+
+}   
+

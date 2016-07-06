@@ -1,0 +1,507 @@
+/*! 
+Theme Name:     Dine
+Theme URI:      http://balsamade.com/dine
+Description:    A simple CMS for one-page restaurant sites
+Author:         Sean Ockert
+Author URI:     balsamade.com
+Version:        0.3
+License:    
+*/
+
+@import "reset.scss";
+@import "../functions.scss";
+@import "variables.scss";
+@import "forms.scss";
+@import "reveal.scss";
+@import "sidebar.scss";
+@import "menu.scss";
+@import "buttons.scss";
+
+html {
+  background: $color-off-white;
+  color: #222;
+  
+  &#login {
+    background: $color-red;
+  }
+}
+
+body {
+  font-family: $base-font-family;
+}
+
+
+#content {
+  height: auto;
+  padding-right: 20px;
+  background: $color-off-white;
+  width: 100%;
+  padding-left: 20px;  
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+#sidebar, #content {
+  float: left;
+}
+
+
+h3 {
+  margin-top: 0;
+}  
+
+/* Login form */
+#login {
+  
+  body {
+    background: $color-red;    
+  }
+
+  
+    
+  h2 {
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    margin-bottom: $base-padding*2;
+    padding-top: $base-padding*2;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  a {
+    color: #fff;
+  }
+      
+  form {
+    width: 90%;
+    margin: 0 auto;
+    
+    fieldset {
+      padding: $base-padding;
+      padding-bottom: $base-padding*2;
+      margin-bottom: $base-padding*2;
+      box-shadow: none;
+    }
+    
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+      padding: $base-padding/1.5 $base-padding/1.5;
+      font-size: $font-size-large;
+      margin-bottom: $base-padding/2;
+      background: $color-off-white;
+      width: 100%;
+    }
+      
+    .button {
+      width: 100%;
+    }    
+  
+    label {     
+      margin-bottom: $base-padding/2;
+    }
+  }
+
+}
+
+/* End Login form */
+
+
+/* Table Styles */
+
+table th,
+table td {
+  padding: 12px;
+  line-height: 1.5;
+}
+
+table form {
+  padding: 0;
+  margin: 0;
+}
+
+  th {
+    &.order {
+      width: 20px;
+    }  
+    &.description {
+      width: 250px;  
+    }  
+    &.price {
+      width: 80px;  
+    }
+    &.menu {
+      width: 100px;
+    } 
+    
+    td.actions {
+      opacity: 0.3;
+    }    
+    
+    &.hover {
+      td.actions {
+        opacity: 1;
+      } 
+    }    
+  }
+
+
+table.item-list { 
+  thead {
+    tr {
+      background: #222;
+      color: $color-off-white;
+      
+      
+      th {
+        padding: 6px 12px;
+        
+                
+        &.blank {
+          background-color: $color-off-white;
+          
+        }
+      }
+    }
+    
+    &.subheader {  
+      th {
+        background: #ddd;
+        color: #666;
+        text-align: left;
+        font-size: $font-size-small;
+      }
+    }
+    
+  }  
+
+  tbody {
+    td {
+      padding: 12px 2px;
+      
+      &.option {
+        white-space: nowrap;
+        padding-left: 12px;
+      }
+    }
+    
+    tr  {  
+      &.odd, &.odd tr.options {
+        background-color:#eee;  
+      }
+      
+      &.options {
+        td {
+          padding: 0 12px;
+          color: #666;
+          font-size: $font-size-small;
+
+        }
+      }
+    }
+  
+  }
+} /* End Item List */
+
+/* End Table Styles */
+
+
+table.item-list tbody input[type='text'] {
+  background: transparent;
+  border: none;
+  padding: 12px;
+  
+    
+  &:hover {
+    background: #fff;
+    cursor: pointer;
+  }    
+  
+  &:focus {
+    background: #fff;
+    cursor: text;
+  }    
+} 
+
+
+
+/* Button Styles */
+
+form input.button {
+  border-radius: none !important;
+}
+  
+.button.small,
+table.item-list tbody input.button {
+  padding: 6px 8px;
+  margin: 6px;
+  margin-right: 0;
+  box-shadow: 1px 1px 0px 1px rgba(0,0,0,0.1);  
+  border-radius: none;
+}
+
+.add-subitem:hover, .add-subitem:focus {
+  text-decoration: underline !important;
+  color: $color-blue;
+}
+
+.tools {
+  margin-top: $base-padding*2;
+  
+  form {
+    margin: 0;
+    margin-right: $base-padding*2;
+    padding-bottom: $base-padding*2;
+  }
+  
+  h3 {
+    margin: 0;
+  }
+}
+
+/* Sortable List */
+
+tr.slip-reordering {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.45) !important;
+}
+
+.move-handle {
+  cursor: ns-resize;
+  font-size: 24px;
+  text-align: center;
+  color: #999;
+  
+  &:hover {
+    color: #333;
+  }
+
+  &:after {
+      content: " \2261";   
+  }
+}
+
+/* End Sortable List */
+
+
+/* Footer */
+
+#footer {
+  text-align: left;
+  padding-left: 20px;  
+  padding-right: 20px;
+  padding-top: 40px;
+  line-height: 150%;
+  color: $color-mute;
+  
+  .logo {
+    display: inline-block;
+    width: 80px;
+    height: auto;
+  }
+  
+  a {
+    color: $color-mute;
+    font-size: $font-size-small;
+    
+    &.right {
+      padding-top: $base-padding;
+    }
+  }
+}
+
+/* End Footer */
+
+
+/* Helper Classes */
+
+.left { float: left; }
+.right { float: right; }
+
+.grey {
+  color: #666;
+  font-weight: 300;
+  display: inline-block;
+  margin-left: $base-padding;
+  font-family: sans-serif;
+}
+
+#content .grey {
+  margin-left: 0;
+  font-size: $font-size-small;
+}
+
+.reveal-modal {
+  form {
+    margin: 0 !important;
+  }
+}
+
+.nolist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.img {
+  padding-right: $base-padding*2;
+}
+
+/* End Helper Classes */
+
+
+/* Columns for photos */
+.column-3 {
+  width: 100%;
+  float: left;
+  
+  img {
+    max-width: 100%;
+  }
+}
+
+/* List of open days in Options.php */
+
+#days-list {
+  li {
+    padding: 10px;
+    display: block;
+    margin: 0;
+    cursor: pointer;
+    color: $color-mute;
+    width: 100%;
+ 
+    &:after {
+      content: '\2713';
+      color: $color-off-white;
+      float: right;
+      line-height: 1;
+      margin-left: $base-padding/2;
+    } 
+    
+    &.active, &.selected {
+      background: $color-dark;
+      color: #fff;
+             
+      &:after {
+        content: '\2713';
+        color: $color-green;
+      }
+    }
+
+  }
+}
+
+/* End List of open days */
+
+
+/* Menu Categories */
+
+.categories {
+  li {
+    float: none;
+    padding: 0;
+    padding-bottom: $base-padding/2;
+    margin: 0;
+  }
+}
+
+
+/* Markdown Formatting */
+
+.preview {
+  min-height: 80px;
+  width: 100%;
+  display: none;
+  border: 1px solid darken($color-light-yellow, 30%);
+  background: $color-light-yellow;
+  padding: $base-padding;
+  font-family: $base-font-family;
+  line-height: 1.4;
+  
+  ul {
+    display: block;
+    clear: both;
+    margin-bottom: $base-padding;
+  } 
+      
+  li {
+    display: block;
+    float: none;
+    margin: $base-padding/2 0;
+    list-style: disc inside !important;
+    
+    &:before {
+      content: '\2022';
+      padding-right: 6px;
+    }
+  }
+}
+
+#markdown-tips {
+  strong {
+    font-weight: $normal;
+    color: darken($color-green,20%);
+    
+    &.regular {
+      font-weight: $bold;
+      color: $color-dark;
+    }
+  }
+  
+  h2, h3 {
+    display: inline; 
+    margin: 0;
+  }
+}
+/* End Markdown Formatting */
+
+  
+@media #{$medium-up} {
+
+  html {
+    border-top: 20px solid $color-red;
+  }
+
+  #content {
+    padding-left: 240px; 
+    overflow: auto;
+  }
+
+  .column-3 {
+    width: 33.33333%;
+  }
+
+  #login {
+    form {
+      width: 400px;
+    } 
+  } 
+  
+  #days-list {
+    li {
+      width: auto;
+    }
+  } 
+  
+
+
+  #footer {
+    padding-left: 240px;  
+  }
+
+
+}  
+
+@media #{$large-up} {
+  .preview {
+    width: 80%;
+  }   
+}  
+
+
+
+
+

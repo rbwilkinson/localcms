@@ -1,0 +1,1415 @@
+/* 
+Theme Name:    LocalCMS
+Theme URI:      http://otgb.net/localcms
+Description:    A simple CMS for one-page retailsites
+Author:         Robert Wilkinson
+Author URI:     otgb.net
+Version:        0.5
+License:    
+*/
+/* normalize.css v1.0.1 | MIT License | git.io/normalize */
+/* line 2, ../../scss/editor/_reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+    display: block; }
+
+/* line 3, ../../scss/editor/_reset.scss */
+audio, canvas, video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1; }
+
+/* line 4, ../../scss/editor/_reset.scss */
+audio:not([controls]) {
+    display: none;
+    height: 0; }
+
+/* line 5, ../../scss/editor/_reset.scss */
+[hidden] {
+    display: none; }
+
+/* line 6, ../../scss/editor/_reset.scss */
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%; }
+
+/* line 7, ../../scss/editor/_reset.scss */
+html, button, input, select, textarea {
+    font-family: sans-serif; }
+
+/* line 8, ../../scss/editor/_reset.scss */
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%; }
+
+/* line 9, ../../scss/editor/_reset.scss */
+a:focus {
+    outline: thin dotted; }
+
+/* line 10, ../../scss/editor/_reset.scss */
+a:active, a:hover {
+    outline: 0; }
+
+/* line 11, ../../scss/editor/_reset.scss */
+h1 {
+    font-size: 2em;
+    margin: 0.7em 0; }
+
+/* line 12, ../../scss/editor/_reset.scss */
+h2 {
+    font-size: 1.5em;
+    margin: 1em 0 .5em; }
+
+/* line 13, ../../scss/editor/_reset.scss */
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0; }
+
+/* line 14, ../../scss/editor/_reset.scss */
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0; }
+
+/* line 15, ../../scss/editor/_reset.scss */
+h5 {
+    font-size: .83em;
+    margin: 1.67em 0; }
+
+/* line 16, ../../scss/editor/_reset.scss */
+h6 {
+    font-size: .75em;
+    margin: 2.33em 0; }
+
+/* line 17, ../../scss/editor/_reset.scss */
+abbr[title] {
+    border-bottom: 1px dotted; }
+
+/* line 18, ../../scss/editor/_reset.scss */
+b, strong {
+    font-weight: bold; }
+
+/* line 19, ../../scss/editor/_reset.scss */
+blockquote {
+    margin: 1em 40px; }
+
+/* line 20, ../../scss/editor/_reset.scss */
+dfn {
+    font-style: italic; }
+
+/* line 21, ../../scss/editor/_reset.scss */
+mark {
+    background: #ff0;
+    color: #000; }
+
+/* line 22, ../../scss/editor/_reset.scss */
+p, pre {
+    margin: 1em 0; }
+
+/* line 23, ../../scss/editor/_reset.scss */
+code, kbd, pre, samp {
+    font-family: monospace,serif;
+    _font-family: 'courier new',monospace;
+    font-size: 1em; }
+
+/* line 24, ../../scss/editor/_reset.scss */
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word; }
+
+/* line 25, ../../scss/editor/_reset.scss */
+q {
+    quotes: none; }
+
+/* line 26, ../../scss/editor/_reset.scss */
+q:before, q:after {
+    content: '';
+    content: none; }
+
+/* line 27, ../../scss/editor/_reset.scss */
+small {
+    font-size: 80%; }
+
+/* line 28, ../../scss/editor/_reset.scss */
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline; }
+
+/* line 29, ../../scss/editor/_reset.scss */
+sup {
+    top: -0.5em; }
+
+/* line 30, ../../scss/editor/_reset.scss */
+sub {
+    bottom: -0.25em; }
+
+/* line 31, ../../scss/editor/_reset.scss */
+dl, menu, ol, ul {
+    margin: 1em 0; }
+
+/* line 32, ../../scss/editor/_reset.scss */
+dd {
+    margin: 0 0 0 40px; }
+
+/* line 33, ../../scss/editor/_reset.scss */
+menu, ol, ul {
+    padding: 0 0 0 40px; }
+
+/* line 34, ../../scss/editor/_reset.scss */
+nav ul, nav ol {
+    list-style: none;
+    list-style-image: none; }
+
+/* line 35, ../../scss/editor/_reset.scss */
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic; }
+
+/* line 36, ../../scss/editor/_reset.scss */
+svg:not(:root) {
+    overflow: hidden; }
+
+/* line 37, ../../scss/editor/_reset.scss */
+figure {
+    margin: 0; }
+
+/* line 38, ../../scss/editor/_reset.scss */
+form {
+    margin: 0; }
+
+/* line 39, ../../scss/editor/_reset.scss */
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: .35em .625em .75em; }
+
+/* line 40, ../../scss/editor/_reset.scss */
+legend {
+    border: 0;
+    padding: 0;
+    white-space: normal;
+    *margin-left: -7px; }
+
+/* line 41, ../../scss/editor/_reset.scss */
+button, input, select, textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    *vertical-align: middle; }
+
+/* line 42, ../../scss/editor/_reset.scss */
+button, input {
+    line-height: normal; }
+
+/* line 43, ../../scss/editor/_reset.scss */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    *overflow: visible; }
+
+/* line 44, ../../scss/editor/_reset.scss */
+button[disabled], input[disabled] {
+    cursor: default; }
+
+/* line 45, ../../scss/editor/_reset.scss */
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+    *height: 13px;
+    *width: 13px; }
+
+/* line 46, ../../scss/editor/_reset.scss */
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box; }
+
+/* line 47, ../../scss/editor/_reset.scss */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none; }
+
+/* line 48, ../../scss/editor/_reset.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0; }
+
+.radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline {
+    margin-top: 0;
+    margin-left: 0px;
+}
+
+input.styles{
+    width: 250px;
+}
+
+/* line 49, ../../scss/editor/_reset.scss */
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    height: auto;
+    min-height: 50px; }
+
+/* line 50, ../../scss/editor/_reset.scss */
+select {
+    width: 100%; }
+
+/* line 51, ../../scss/editor/_reset.scss */
+table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+
+/* line 52, ../../scss/editor/_reset.scss */
+::-moz-selection {
+    background: #d7fcb3;
+    text-shadow: none; }
+
+/* line 53, ../../scss/editor/_reset.scss */
+::selection {
+    background: #d7fcb3;
+    text-shadow: none; }
+
+/* line 54, ../../scss/editor/_reset.scss */
+.placeholder {
+    color: #999; }
+
+/* line 55, ../../scss/editor/_reset.scss */
+::-webkit-input-placeholder {
+    color: #999; }
+
+/* line 56, ../../scss/editor/_reset.scss */
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color: #999; }
+
+/* line 57, ../../scss/editor/_reset.scss */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0; }
+
+/* line 60, ../../scss/editor/_reset.scss */
+img {
+    display: inline-block;
+    -ms-interpolation-mode: bicubic; }
+
+/* line 66, ../../scss/editor/_reset.scss */
+img, object, embed {
+    max-width: 100%;
+    height: auto; }
+
+/* line 70, ../../scss/editor/_reset.scss */
+object, embed {
+    height: 100%; }
+
+/* Mixins */
+/* Clear floats */
+/* line 62, ../../scss/_functions.scss */
+.clearfix {
+    *zoom: 1; }
+/* line 59, ../../scss/_functions.scss */
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table; }
+/* line 60, ../../scss/_functions.scss */
+.clearfix:after {
+    clear: both; }
+
+/* line 66, ../../scss/_functions.scss */
+.clear {
+    clear: both; }
+
+
+/* Replaced by Bourbon functions */
+/* line 88, ../../scss/_functions.scss */
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+/* line 3, ../../scss/editor/_forms.scss */
+form {
+    margin: 24px 0;
+    position: relative; }
+/* line 7, ../../scss/editor/_forms.scss */
+form.delete-category {
+    display: inline-block;
+    margin: 0; }
+/* line 12, ../../scss/editor/_forms.scss */
+form p {
+    margin: 0;
+    margin-bottom: 6px; }
+/* line 17, ../../scss/editor/_forms.scss */
+form em {
+    font-size: 14px;
+    color: #666666;
+    font-weight: 300; }
+
+/* line 25, ../../scss/editor/_forms.scss */
+fieldset {
+    padding: 0;
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #bbb;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+
+/* line 33, ../../scss/editor/_forms.scss */
+legend {
+    display: none; }
+
+/* line 38, ../../scss/editor/_forms.scss */
+input,
+select {
+    color: #444444;
+    background: #fff;
+     }
+
+/* line 45, ../../scss/editor/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+    vertical-align: middle;
+    display: inline-block;
+    margin: -4px 0 0; }
+
+/* line 55, ../../scss/editor/_forms.scss */
+#login input[type="text"],
+#login input[type="password"],
+#login input[type="email"],
+#login select,
+#login textarea{
+    width: 150px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+    vertical-align: middle;
+    display: inline-block;
+    padding: 12px 12px;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+/* line 64, ../../scss/editor/_forms.scss */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    background: #fff;
+    color: #444444;
+    border: 1px solid #333333; }
+
+/* line 71, ../../scss/editor/_forms.scss */
+input[type="submit"] {
+    margin-top: 12px;
+    width: auto; }
+
+/* line 77, ../../scss/editor/_forms.scss */
+input.price {
+    width: 70px; }
+
+/* line 80, ../../scss/editor/_forms.scss */
+input.long {
+    width: 430px; }
+
+/* line 84, ../../scss/editor/_forms.scss */
+input.item-order {
+    width: 34px;
+    color: #999; }
+/* line 88, ../../scss/editor/_forms.scss */
+input.item-order:focus {
+    color: #222; }
+
+/* line 96, ../../scss/editor/_forms.scss */
+input.delete,
+input.delete:hover,
+input.delete:focus,
+.add-subitem {
+    border: none;
+    background: transparent;
+    color: #666;
+    text-decoration: underline !important;
+    padding: 6px;
+    line-height: 1.5;
+    margin-top: 0 !important;
+    font-weight: 400;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+/* line 109, ../../scss/editor/_forms.scss */
+input.delete:hover,
+input.delete:focus {
+    text-decoration: underline !important;
+    color: #ba291f; }
+
+/* line 114, ../../scss/editor/_forms.scss */
+select {
+    min-width: 100px;
+    max-width: 300px; }
+
+/* line 119, ../../scss/editor/_forms.scss */
+textarea {
+    width: 100%;
+    height: 80px;
+    min-height: 80px; }
+
+/* line 126, ../../scss/editor/_forms.scss */
+label {
+    display: inline-block;
+    line-height: 1.5;
+    width: 100%;
+    font-weight: 700;
+    font-size: 14px; }
+/* line 134, ../../scss/editor/_forms.scss */
+label.checkbox, label.radio {
+    margin: 0 0 0 5px;
+    width: auto; }
+/* line 139, ../../scss/editor/_forms.scss */
+label.textarea {
+    display: block; }
+
+/* line 145, ../../scss/editor/_forms.scss */
+.alert {
+    padding: 24px;
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    margin: 0;
+    margin-top: 24px;
+    margin-left: -150px;
+    width: 90%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0);
+    font-weight: 300;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 50% 50%;
+    opacity: 1;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+/* line 168, ../../scss/editor/_forms.scss */
+.alert.success {
+    background: #527e3e;
+    background: rgba(82, 126, 62, 0.9); }
+/* line 173, ../../scss/editor/_forms.scss */
+.alert.error {
+    background: #ba291f;
+    background: rgba(161, 23, 23, 0.9); }
+/* line 178, ../../scss/editor/_forms.scss */
+.alert.active {
+    margin-top: -100px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    opacity: 1; }
+/* line 184, ../../scss/editor/_forms.scss */
+.alert.hidden {
+    margin-top: 24px;
+    opacity: 0; }
+
+
+.navig label {
+    float: left;
+    display: inline;
+    clear: none;
+    display: block;
+    padding: 2px 1em 0 0;
+}
+
+.navig input[type="radio"] {
+    display: inline;
+    height: 1.2em;
+    width: auto;
+    float: left;
+    clear: none;
+    margin: 2px 0 0 2px;
+    vertical-align:text-top;
+    width:13px;
+    height:13px;
+    padding:0;
+    margin:0;
+    position:relative;
+    overflow:hidden;
+    top:2px;
+}
+
+/* line 190, ../../scss/editor/_forms.scss */
+.delete-content {
+    float: left;
+    padding: 0;
+    margin: 0;
+    margin-top: -62px;
+    margin-left: 130px; }
+
+/* line 199, ../../scss/editor/_forms.scss */
+a.preview-button {
+    position: absolute;
+    right: 0;
+    top: 65px;
+    background: #333333;
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    display: block;
+    padding: 6px;
+    text-decoration: none;
+    width: 70px;
+    text-align: center;
+    opacity: 0.3; }
+/* line 214, ../../scss/editor/_forms.scss */
+a.preview-button:hover, a.preview-button:active, a.preview-button.active {
+    opacity: 1; }
+
+.selsoc{
+    width: 30px;
+}
+
+@media only screen and (min-width: 40.063em) {
+    /* line 225, ../../scss/editor/_forms.scss */
+    .alert, .short {
+        width: 300px; }
+
+    /* line 229, ../../scss/editor/_forms.scss */
+    .alert {
+        left: 50%;
+        top: 0;
+        margin-left: -150px; }
+}
+@media only screen and (min-width: 64.063em) {
+    /* line 243, ../../scss/editor/_forms.scss */
+    a.preview-button {
+        right: 20%; }
+
+    /* line 248, ../../scss/editor/_forms.scss */
+    textarea {
+        width: 80%; } }
+/*	--------------------------------------------------
+        Reveal Modals
+        -------------------------------------------------- */
+/* line 5, ../../scss/editor/_reveal.scss */
+.reveal-modal-bg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    display: none;
+    top: 0;
+    left: 0; }
+
+/* line 17, ../../scss/editor/_reveal.scss */
+.reveal-modal {
+    visibility: hidden;
+    top: 20px;
+    width: 90%;
+    background: #eee;
+    position: absolute;
+    z-index: 101;
+    padding: 30px 40px 34px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    -box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+
+/* line 33, ../../scss/editor/_reveal.scss */
+.reveal-modal.small {
+    width: 200px;
+    margin-left: -140px; }
+
+/* line 34, ../../scss/editor/_reveal.scss */
+.reveal-modal.medium {
+    width: 400px;
+    margin-left: -240px; }
+
+/* line 35, ../../scss/editor/_reveal.scss */
+.reveal-modal.large {
+    width: 600px;
+    margin-left: -340px; }
+
+/* line 36, ../../scss/editor/_reveal.scss */
+.reveal-modal.xlarge {
+    width: 800px;
+    margin-left: -440px; }
+
+/* line 38, ../../scss/editor/_reveal.scss */
+.reveal-modal .close-reveal-modal {
+    font-size: 24px;
+    line-height: .5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    color: #aaa;
+    text-shadow: 0 -1px 1px rbga(0, 0, 0, 0.6);
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none !important; }
+/* line 51, ../../scss/editor/_reveal.scss */
+.reveal-modal .close-reveal-modal:hover, .reveal-modal .close-reveal-modal:focus {
+    color: #111; }
+
+@media only screen and (min-width: 40.063em) {
+    /* line 60, ../../scss/editor/_reveal.scss */
+    .reveal-modal {
+        top: 100px;
+        left: 50%;
+        margin-left: -300px;
+        width: 520px; } }
+/* line 2, ../../scss/editor/_sidebar.scss */
+
+#sidebar {
+    background: #004444;
+    color: #f7f7f7;
+    height: 100%;
+    padding: 0;
+    overflow-y: scroll; }
+/* line 9, ../../scss/editor/_sidebar.scss */
+#sidebar h2 {
+    padding: 0;
+    margin: 0;
+    float: none;
+    clear: both;
+    background-color: lightblue;
+    text-shadow: 1px 1px 2px black;
+}
+/* line 15, ../../scss/editor/_sidebar.scss */
+#sidebar h2 a {
+    color: #f7f7f7;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    -moz-transition: background-color 0.15s ease-in;
+    -webkit-transition: background-color 0.15s ease-in;
+    transition: background-color 0.2s ease-in; }
+/* line 24, ../../scss/editor/_sidebar.scss */
+#sidebar h2 a:hover {
+    background: #e4645b; }
+
+/* line 31, ../../scss/editor/_sidebar.scss */
+#sidebar {
+    width: 100%;
+    /*height: 46px;*/
+    height: auto;
+    clear: both; }
+
+.login-lcms{
+    color: whitesmoke;
+}
+
+@media only screen and (min-width: 40.063em) {
+    /* line 42, ../../scss/editor/_sidebar.scss */
+    #sidebar {
+        height: 100%;
+        width: 220px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow: auto; }
+    /* line 50, ../../scss/editor/_sidebar.scss */
+    #sidebar h2 {
+        width: auto;
+        float: none; }
+    /* line 54, ../../scss/editor/_sidebar.scss */
+    #sidebar h2 a {
+        padding: 30px 12px;
+        margin-top: 20px; } }
+/* Responsive-nav.js 1.0.25 by @viljamis. Animation by Bennett Feely http://sarasoueidan.com/blog/navicon-transformicons */
+/* line 3, ../../scss/editor/_menu.scss */
+.nav-collapse {
+    max-height: inherit !important;
+    width: 100%;
+    -webkit-transition: height 0.2s ease-in-out;
+    -ms-transition: height 0.2s ease-in-out;
+    -moz-transition: height 0.2s ease-in-out;
+    transition: height 0.2s ease-in-out; }
+/* line 8, ../../scss/editor/_menu.scss */
+.nav-collapse ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    list-style: none; }
+/* line 16, ../../scss/editor/_menu.scss */
+.nav-collapse li {
+    width: 100%;
+    display: block;
+    margin: 0; }
+/* line 21, ../../scss/editor/_menu.scss */
+.nav-collapse li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 12px; }
+/* line 27, ../../scss/editor/_menu.scss */
+.nav-collapse li a:hover, .nav-collapse li a:focus, .nav-collapse li a:active {
+    background-color: #8e1f18;
+    color: #fff; }
+/* line 32, ../../scss/editor/_menu.scss */
+.nav-collapse li a.active {
+    background-color: #dc3b30; }
+/* line 36, ../../scss/editor/_menu.scss */
+.nav-collapse li a.logout {
+    margin-top: 12px;
+    background-color: #781b14; }
+/* line 42, ../../scss/editor/_menu.scss */
+.nav-collapse li.tel {
+    display: none; }
+/* line 47, ../../scss/editor/_menu.scss */
+.nav-collapse.opened {
+    max-height: 9999px !important; }
+/* line 51, ../../scss/editor/_menu.scss */
+.nav-collapse.disable-pointer-events {
+    pointer-events: none !important; }
+
+/* line 56, ../../scss/editor/_menu.scss */
+.js .nav-collapse {
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    zoom: 1; }
+
+/* line 65, ../../scss/editor/_menu.scss */
+.columns.nav-collapse {
+    padding: 0; }
+
+.open.nav-menu.x{
+    width: 40px;
+    height: 40px;
+    background: #363636;
+    padding: 10px;
+    color: red;
+}
+
+.close.nav-menu.x{
+    width: 40px;
+    height: 40px;
+    color: red;
+    padding: 10px;
+    background: #363636;
+}
+
+/* line 81, ../../scss/editor/_menu.scss */
+.nav-menu {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    outline: none;
+    border: none !important;
+    box-shadow: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 16px;
+    padding-left: 10px; }
+/* line 95, ../../scss/editor/_menu.scss */
+.nav-menu:after, .nav-menu:before {
+    display: none; }
+
+/* line 101, ../../scss/editor/_menu.scss */
+.lines {
+    display: inline-block;
+    width: 2rem;
+    height: 0.28571rem;
+    background: #fff;
+    border-radius: 0.14286rem;
+    -webkit-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    position: relative; }
+/* line 105, ../../scss/editor/_menu.scss */
+.lines:before, .lines:after {
+    display: inline-block;
+    width: 2rem;
+    height: 0.28571rem;
+    background: #fff;
+    border-radius: 0.14286rem;
+    -webkit-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    position: absolute;
+    left: 0;
+    content: '';
+    transform-origin: 0.14286rem center; }
+/* line 113, ../../scss/editor/_menu.scss */
+.lines:before {
+    top: 0.5rem; }
+/* line 114, ../../scss/editor/_menu.scss */
+.lines:after {
+    top: -0.5rem; }
+
+/* line 117, ../../scss/editor/_menu.scss */
+.nav-menu.x.close .lines {
+    background: lightblue; 
+}
+/* line 120, ../../scss/editor/_menu.scss */
+.nav-menu.x.close .lines:before, .nav-menu.x.close .lines:after {
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    top: 0;
+    width: 2rem;
+    height: 0.44444rem; }
+/* line 127, ../../scss/editor/_menu.scss */
+.nav-menu.x.close .lines:before {
+    -webkit-transform: rotate3d(0, 0, 1, 45deg) scale(0.8);
+    -ms-transform: rotate3d(0, 0, 1, 45deg) scale(0.8);
+    -moz-transform: rotate3d(0, 0, 1, 45deg) scale(0.8);
+    transform: rotate3d(0, 0, 1, 45deg) scale(0.8); }
+/* line 130, ../../scss/editor/_menu.scss */
+.nav-menu.x.close .lines:after {
+    -webkit-transform: rotate3d(0, 0, 1, -45deg) scale(0.8);
+    -ms-transform: rotate3d(0, 0, 1, -45deg) scale(0.8);
+    -moz-transform: rotate3d(0, 0, 1, -45deg) scale(0.8);
+    transform: rotate3d(0, 0, 1, -45deg) scale(0.8); }
+
+@media only screen and (min-width: 40.063em) {
+    /* line 139, ../../scss/editor/_menu.scss */
+    .js .nav-collapse {
+        position: relative; }
+    /* line 142, ../../scss/editor/_menu.scss */
+    .js .nav-collapse.closed {
+        max-height: none; }
+
+    /* line 147, ../../scss/editor/_menu.scss */
+    .nav-menu, .nav-toggle {
+        display: none; }
+
+    /* line 152, ../../scss/editor/_menu.scss */
+    .nav-collapse {
+        display: block; }
+    /* line 154, ../../scss/editor/_menu.scss */
+    .nav-collapse ul {
+        position: relative;
+        top: auto;
+        right: auto;
+        display: block;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        background: none;
+        text-align: right; }
+    /* line 166, ../../scss/editor/_menu.scss */
+    .nav-collapse li {
+        float: none;
+        display: inline;
+        margin: 0; }
+    /* line 171, ../../scss/editor/_menu.scss */
+    .nav-collapse li a {
+        float: none;
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+        padding: 5px; }
+
+    /* line 178, ../../scss/editor/_menu.scss */
+    .nav-collapse li a:hover, .nav-collapse li a:focus, .nav-collapse li a:active {
+        background-color: #007777; }
+    /* line 182, ../../scss/editor/_menu.scss */
+    .nav-collapse li a.active {
+        background: #f7f7f7;
+        color: #ba291f; }
+    /* line 187, ../../scss/editor/_menu.scss */
+    .nav-collapse li a.logout {
+        background-color: #005555;
+        margin-top: 24px; } }
+/* line 18, ../../scss/editor/_buttons.scss */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+/* line 23, ../../scss/editor/_buttons.scss */
+ul li {
+    float: left;
+    margin: 20px; }
+
+/* line 29, ../../scss/editor/_buttons.scss */
+body {
+    background: #f7f7f7; }
+
+/* Button Styles for Fruit Ninja Store  ---------------------- */
+/* Attache Button Style Mixin to Elements */
+/* line 112, ../../scss/editor/_buttons.scss */
+.button,
+button {
+    margin: -3px 0 1px 0 !important;
+    padding: 8px 12px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: inline-block;
+    line-height: 12px;
+    zoom: 1;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none !important;
+    text-align: center;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+    box-shadow: 1px 2px 0px 1px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-bottom: 3px solid #c4c4c4;
+    border-radius: none !important; }
+/* line 56, ../../scss/editor/_buttons.scss */
+.button:after, .button:before,
+button:after,
+button:before {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+/* line 64, ../../scss/editor/_buttons.scss */
+.button:hover, .button:focus,
+button:hover,
+button:focus {
+    background: #d0d0d0;
+    outline: none; 
+box-shadow: none;
+}
+/* line 70, ../../scss/editor/_buttons.scss */
+.button:active,
+button:active {
+    margin-top: -1px !important;
+    border-bottom: 1px solid #bfbfbf; }
+/* line 115, ../../scss/editor/_buttons.scss */
+.button.green,
+button.green {
+    background: #005555;
+}
+/* line 80, ../../scss/editor/_buttons.scss */
+.button.green:hover, .button.green:focus,
+button.green:hover,
+button.green:focus {
+    box-shadow: none;
+    background: #004444;
+}
+/* line 85, ../../scss/editor/_buttons.scss */
+.button.green:active,
+button.green:active {
+    margin-bottom: -3px; }
+/* line 119, ../../scss/editor/_buttons.scss */
+.button.blue,
+button.blue {
+    background: #14b8db;
+    border-bottom: 3px solid #1199b6; }
+/* line 97, ../../scss/editor/_buttons.scss */
+.button.blue:hover, .button.blue:focus,
+button.blue:hover,
+button.blue:focus {
+    background: #13accd;
+    border-color: #1091ac; }
+/* line 102, ../../scss/editor/_buttons.scss */
+.button.blue:active,
+button.blue:active {
+    border-bottom: 1px solid #1091ac;
+    box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 0.1); }
+
+/* line 20, ../../scss/editor/editor.scss */
+html {
+    background: #f7f7f7;
+    color: #222; }
+/* line 24, ../../scss/editor/editor.scss */
+
+/* line 29, ../../scss/editor/editor.scss */
+body {
+    font-family: sans-serif; }
+
+/* line 34, ../../scss/editor/editor.scss */
+#content {
+    height: auto;
+    padding-right: 20px;
+    background: #f7f7f7;
+    width: 100%;
+    padding-left: 20px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; }
+
+/* line 44, ../../scss/editor/editor.scss */
+#sidebar, #content {
+    float: left; }
+
+/* line 49, ../../scss/editor/editor.scss */
+h3 {
+    margin-top: 0; }
+
+/* Login form */
+/* line 56, ../../scss/editor/editor.scss */
+#login body {
+    background: url(../../images/lcmsbg.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: whitesmoke;
+}
+
+
+.form-horizontal .form-group {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.login-lcms .container .details {
+    border-left: 1px solid rgba(255,255,255,.3);
+    padding-left: 40px;
+}
+
+.login-lcms .container .form-horizontal .control-label {
+    font-size: 13px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.form-control {
+    width: 100%;
+    height: 26px;
+    padding: 2px 6px;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    border-radius: 1px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.form-control, output {
+    font-size: 12px;
+    line-height: 1.66666667;
+    color: #363636;
+    display: block;
+}
+
+
+/* End Login form */
+/* Table Styles */
+/* line 116, ../../scss/editor/editor.scss */
+table th,
+table td {
+    padding: 12px;
+    line-height: 1.5; }
+
+/* line 121, ../../scss/editor/editor.scss */
+table form {
+    padding: 0;
+    margin: 0; }
+
+/* line 127, ../../scss/editor/editor.scss */
+th.order {
+    width: 20px; }
+/* line 130, ../../scss/editor/editor.scss */
+th.description {
+    width: 250px; }
+/* line 133, ../../scss/editor/editor.scss */
+th.price {
+    width: 80px; }
+/* line 136, ../../scss/editor/editor.scss */
+th.menu {
+    width: 100px; }
+/* line 140, ../../scss/editor/editor.scss */
+th td.actions {
+    opacity: 0.3; }
+/* line 145, ../../scss/editor/editor.scss */
+th.hover td.actions {
+    opacity: 1; }
+
+/* line 154, ../../scss/editor/editor.scss */
+table.item-list thead tr {
+    background: #222;
+    color: #f7f7f7; }
+/* line 159, ../../scss/editor/editor.scss */
+table.item-list thead tr th {
+    padding: 6px 12px; }
+/* line 163, ../../scss/editor/editor.scss */
+table.item-list thead tr th.blank {
+    background-color: #f7f7f7; }
+/* line 171, ../../scss/editor/editor.scss */
+table.item-list thead.subheader th {
+    background: #ddd;
+    color: #666;
+    text-align: left;
+    font-size: 14px; }
+/* line 182, ../../scss/editor/editor.scss */
+table.item-list tbody td {
+    padding: 12px 2px; }
+/* line 185, ../../scss/editor/editor.scss */
+table.item-list tbody td.option {
+    white-space: nowrap;
+    padding-left: 12px; }
+/* line 192, ../../scss/editor/editor.scss */
+table.item-list tbody tr.odd, table.item-list tbody tr.odd tr.options {
+    background-color: #eee; }
+/* line 197, ../../scss/editor/editor.scss */
+table.item-list tbody tr.options td {
+    padding: 0 12px;
+    color: #666;
+    font-size: 14px; }
+
+/* End Item List */
+/* End Table Styles */
+/* line 212, ../../scss/editor/editor.scss */
+table.item-list tbody input[type='text'] {
+    background: transparent;
+    border: none;
+    padding: 12px; }
+/* line 218, ../../scss/editor/editor.scss */
+table.item-list tbody input[type='text']:hover {
+    background: #fff;
+    cursor: pointer; }
+/* line 223, ../../scss/editor/editor.scss */
+table.item-list tbody input[type='text']:focus {
+    background: #fff;
+    cursor: text; }
+
+/* Button Styles */
+/* line 233, ../../scss/editor/editor.scss */
+form input.button {
+    border-radius: none !important; }
+
+/* line 238, ../../scss/editor/editor.scss */
+.button.small,
+table.item-list tbody input.button {
+    padding: 6px 8px;
+    margin: 6px;
+    margin-right: 0;
+    box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 0.1);
+    border-radius: none; }
+
+/* line 246, ../../scss/editor/editor.scss */
+.add-subitem:hover, .add-subitem:focus {
+    text-decoration: underline !important;
+    color: #14b8db; }
+
+/* line 251, ../../scss/editor/editor.scss */
+.tools {
+    margin-top: 24px; }
+/* line 254, ../../scss/editor/editor.scss */
+.tools form {
+    margin: 0;
+    margin-right: 24px;
+    padding-bottom: 24px; }
+/* line 260, ../../scss/editor/editor.scss */
+.tools h3 {
+    margin: 0; }
+
+/* Sortable List */
+/* line 267, ../../scss/editor/editor.scss */
+tr.slip-reordering {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.45) !important; }
+
+/* line 271, ../../scss/editor/editor.scss */
+.move-handle {
+    cursor: ns-resize;
+    font-size: 24px;
+    text-align: center;
+    color: #999; }
+/* line 277, ../../scss/editor/editor.scss */
+.move-handle:hover {
+    color: #333; }
+/* line 281, ../../scss/editor/editor.scss */
+.move-handle:after {
+    content: " \2261"; }
+
+/* End Sortable List */
+/* Footer */
+/* line 291, ../../scss/editor/editor.scss */
+#footer {
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    line-height: 150%;
+    color: #999999; }
+/* line 299, ../../scss/editor/editor.scss */
+#footer .logo {
+    display: inline-block;
+    height: auto; }
+#footer .logo img{
+    height: 24px;
+}
+
+/* line 305, ../../scss/editor/editor.scss */
+#footer a {
+    color: #999999;
+    font-size: 14px; }
+/* line 309, ../../scss/editor/editor.scss */
+#footer a.right {
+    padding-top: 12px; }
+
+/* End Footer */
+/* Helper Classes */
+/* line 320, ../../scss/editor/editor.scss */
+.left {
+    float: left; }
+
+/* line 321, ../../scss/editor/editor.scss */
+.right {
+    float: right; }
+
+/* line 323, ../../scss/editor/editor.scss */
+.grey {
+    color: #666;
+    font-weight: 300;
+    display: inline-block;
+    margin-left: 12px;
+    font-family: sans-serif; }
+
+/* line 331, ../../scss/editor/editor.scss */
+#content .grey {
+    margin-left: 0;
+    font-size: 14px; }
+
+/* line 337, ../../scss/editor/editor.scss */
+.reveal-modal form {
+    margin: 0 !important; }
+
+/* line 342, ../../scss/editor/editor.scss */
+.nolist {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+
+/* line 348, ../../scss/editor/editor.scss */
+.img {
+    margin: auto;
+    }
+    
+
+/* End Helper Classes */
+/* Columns for photos */
+/* line 356, ../../scss/editor/editor.scss */
+.column-3 {
+    width: 100%;
+    float: left; }
+/* line 360, ../../scss/editor/editor.scss */
+.column-3 img {
+    max-width: 100%; }
+
+/* List of open days in Options.php */
+/* line 368, ../../scss/editor/editor.scss */
+#days-list li {
+    padding: 10px;
+    display: block;
+    margin: 0;
+    cursor: pointer;
+    color: #999999;
+    width: 100%; }
+/* line 376, ../../scss/editor/editor.scss */
+#days-list li:after {
+    content: '\2713';
+    color: #f7f7f7;
+    float: right;
+    line-height: 1;
+    margin-left: 6px; }
+/* line 384, ../../scss/editor/editor.scss */
+#days-list li.active, #days-list li.selected {
+    background: #333333;
+    color: #fff; }
+/* line 388, ../../scss/editor/editor.scss */
+#days-list li.active:after, #days-list li.selected:after {
+    content: '\2713';
+    color: #77e427; }
+
+/* End List of open days */
+/* Menu Categories */
+/* line 403, ../../scss/editor/editor.scss */
+.categories li {
+    float: none;
+    padding: 0;
+    padding-bottom: 6px;
+    margin: 0; }
+
+/* Markdown Formatting */
+/* line 414, ../../scss/editor/editor.scss */
+.preview {
+    min-height: 80px;
+    width: 100%;
+    display: none;
+    border: 1px solid #fff13d;
+    background: #fffcd6;
+    padding: 12px;
+    font-family: sans-serif;
+    line-height: 1.4; }
+/* line 424, ../../scss/editor/editor.scss */
+.preview ul {
+    display: block;
+    clear: both;
+    margin-bottom: 12px; }
+/* line 430, ../../scss/editor/editor.scss */
+.preview li {
+    display: block;
+    float: none;
+    margin: 6px 0;
+    list-style: disc inside !important; }
+/* line 436, ../../scss/editor/editor.scss */
+.preview li:before {
+    content: '\2022';
+    padding-right: 6px; }
+
+/* line 444, ../../scss/editor/editor.scss */
+#markdown-tips strong {
+    font-weight: 300;
+    color: #499312; }
+/* line 448, ../../scss/editor/editor.scss */
+#markdown-tips strong.regular {
+    font-weight: 700;
+    color: #333333; }
+/* line 454, ../../scss/editor/editor.scss */
+#markdown-tips h2, #markdown-tips h3 {
+    display: inline;
+    margin: 0; }
+
+/* End Markdown Formatting */
+@media only screen and (min-width: 40.063em) {
+    /* line 464, ../../scss/editor/editor.scss */
+    html {
+        border-top: 20px solid #004444; }
+
+    /* line 468, ../../scss/editor/editor.scss */
+    #content {
+        padding-left: 240px;
+        overflow: auto; }
+
+    /* line 473, ../../scss/editor/editor.scss */
+    .column-3 {
+        width: 33.33333%; }
+
+    /* line 484, ../../scss/editor/editor.scss */
+    #days-list li {
+        width: auto; }
+
+    /* line 491, ../../scss/editor/editor.scss */
+    #footer {
+        padding-left: 240px; } }
+@media only screen and (min-width: 64.063em) {
+    /* line 499, ../../scss/editor/editor.scss */
+    .preview {
+        width: 80%; } }
