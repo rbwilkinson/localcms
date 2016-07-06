@@ -8,7 +8,7 @@ A simple CMS for single page websites.
 This extends the functionality of the original development as it was decided that the newer features were necessary.
 Specifically restaurants and small businesses that often want to display a list of their inventory or menu items without a full-blown stock CMS.
 
-Check out a demo here: [http://otgb.net.com/localcms]  
+Check out a demo here: [http://otgb.net/localcms]  
 
 Login and edit content: http://%yoursite%/edit/ 
     Username: admin
