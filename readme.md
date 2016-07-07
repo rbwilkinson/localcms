@@ -26,10 +26,12 @@ Login and edit content: http://otgb.net/localcms/edit/
 - .
 
 ##Installation
-===
 Install in your web folder.
 Change login details in credentials.php.
+Use a free online sha1 hashing service.
 It is recommended that you use a database to manage your logins and sessions.
+
+It is best to run the software on PHP5.4 or above.
 
 
 ##Licence
