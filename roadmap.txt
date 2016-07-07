@@ -1,0 +1,4 @@
+For LocalCMS v.8 
+
+Custom map/location page using Leaflet.
+A contact form.
