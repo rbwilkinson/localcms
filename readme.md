@@ -25,6 +25,13 @@ Login and edit content: http://otgb.net/localcms/edit/
 - Added Slideshow and Gallery capabilties
 - .
 
+##Installation
+===
+Install in your web folder.
+Change login details in credentials.php.
+It is recommended that you use a database to manage your logins and sessions.
+
+
 ##Licence
 
 The MIT License
